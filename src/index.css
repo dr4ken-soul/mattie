@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Newsreader', serif;
+  --font-body: 'Manrope', sans-serif;
+
+  /* Night sections */
+  --night-bg-primary: #0B1620;
+  --night-bg-secondary: #0F1D2B;
+  --night-bg-surface: #142534;
+  --night-bg-elevated: #1A2E40;
+  --night-text-primary: #F3F1EC;
+  --night-text-secondary: #A9B7C4;
+  --night-text-muted: #64768A;
+  --night-border-subtle: rgba(243, 241, 236, 0.06);
+  --night-border-default: rgba(243, 241, 236, 0.12);
+  --night-shadow-md: 0 16px 48px rgba(232, 169, 96, 0.1), 0 4px 12px rgba(0, 0, 0, 0.45);
+
+  /* Day sections */
+  --day-bg-primary: #EFF5F9;
+  --day-bg-secondary: #E4EDF3;
+  --day-bg-surface: #FFFFFF;
+  --day-text-primary: #0F1D2B;
+  --day-text-secondary: #4A5C6B;
+  --day-text-muted: #8494A1;
+  --day-border-subtle: rgba(15, 29, 43, 0.05);
+  --day-border-default: rgba(15, 29, 43, 0.1);
+  --day-shadow-md: 0 20px 40px -15px rgba(15, 29, 43, 0.08);
+
+  /* Shared */
+  --accent: #E8A960;
+  --accent-hover: #F0BC7D;
+  --accent-glow: rgba(232, 169, 96, 0.14);
+  --success: #4F9A6E;
+  --error: #C1543F;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-2xl: 40px;
+  --duration-fast: 150ms;
+  --duration-normal: 350ms;
+  --duration-slow: 650ms;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.material-symbols-rounded {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  font-size: inherit;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.glass-night {
+  background: rgba(20, 37, 52, 0.55);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(243, 241, 236, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+.glass-day {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(15, 29, 43, 0.08);
+  box-shadow: 0 8px 32px rgba(15, 29, 43, 0.06);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--night-bg-primary);
+  color: var(--night-text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
